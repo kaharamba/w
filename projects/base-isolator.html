@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Isolator Performance Analysis — Structural Systems Study </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        .back-link::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .single-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin: 25px auto;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .fea-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .fea-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .single-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Portfolio</a>
+            <h1>Base Isolator Performance Analysis — Structural Systems Study</h1>
+            <p class="subtitle">Completed as part of ME2191: Mechanics of Materials</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                This project evaluated the feasibility of low-cost, eco-friendly base isolation systems by comparing conventional lead–rubber bearings with alternative isolators constructed from recycled scrap tire rubber pads (STRPs). The motivation was to assess whether material substitution could meaningfully reduce the high cost of seismic isolation systems while maintaining acceptable structural performance for medium-sized buildings.
+            </p>
+        </section>
+
+        <section>
+            <h2>Analysis Approach</h2>
+            <p>
+                The study compared axial and lateral performance of standard and STRP-based isolators using a combination of analytical modeling, finite element analysis, and numerical simulation. Material properties for recycled rubber were sourced from prior experimental literature, and system-level stiffness, shear behavior, stress distribution, and frequency response were evaluated under representative seismic loading conditions.
+            </p>
+
+            <div class="single-image">
+                <img src="../images/base/sketch_base_isolator.jpg" 
+                     alt="Conceptual Decomposition of a Lead-Rubber Base Isolator" 
+                     style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+            </div>
+            <p style="text-align: center; margin-top: 10px; font-size: 0.9em; color: #7f8c8d;">Conceptual Decomposition of a Lead–Rubber Base Isolator</p>
+
+            <div class="images-grid">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/base/stiffness.png" 
+                         alt="Stiffness vs Thickness" 
+                         style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">Stiffness vs Thickness</p>
+                </div>
+            </div>
+
+            <div class="fea-grid">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/base/fea1.png" 
+                         alt="FEA Von Mises Plot - Conventional Design" 
+                         style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">FEA Von Mises Plot (Conventional)</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/base/fea2.png" 
+                         alt="FEA Von Mises Plot - Eco Design" 
+                         style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">FEA Von Mises Plot (Eco-Friendly)</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Findings</h2>
+            <ul>
+                <li>STRP-based isolators exhibited significantly lower stiffness under both axial and shear loading compared to standard lead–rubber systems</li>
+                <li>Von Mises stress analysis showed higher stress concentrations in the eco-friendly design, particularly near plate interfaces</li>
+                <li>The absence of a central lead core and steel reinforcement plates was identified as the primary contributor to reduced axial load capacity and energy dissipation</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Engineering Interpretation</h2>
+            <p>
+                While recycled rubber isolators demonstrated potential cost and sustainability benefits, the analysis showed that material substitution alone is insufficient to match the performance of conventional base isolation systems. Structural features such as lead cores and reinforcement plates play a dominant role in axial load absorption and stress mitigation. The results suggest that hybrid designs incorporating these elements could improve STRP performance and enable broader adoption in cost-sensitive regions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>
+                This study highlights the importance of system-level design, rather than material selection alone, in seismic isolation performance. Although the eco-friendly configuration underperformed in its current form, targeted design modifications could enable viable low-cost alternatives for medium-scale applications, warranting further analysis and optimization.
+            </p>
+        </section>
+
+       
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

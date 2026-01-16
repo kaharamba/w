@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Brayton-Cycle Mini-Fridge - Concept Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        .back-link::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-placeholder {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Portfolio</a>
+            <h1>Reverse Brayton-Cycle Mini-Fridge — Concept Design</h1>
+            <p class="subtitle">Completed as part of ME2331: Introduction to Design</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                This project developed a preliminary concept for a compact 12×12 mini-fridge based on a reversed Brayton cycle using air as the working fluid. The system architecture integrates a small centrifugal compressor, heat exchanger, turbo pump, and fan to enable rapid heat extraction without relying on refrigerants or consumable materials.
+            </p>
+            <p>
+                The Brayton-cycle approach was selected over solar, ice-based, and thermoelectric alternatives due to its low environmental impact, minimal setup requirements, and potential for fast transient cooling. A structured trade study using Pugh's Matrix identified the Brayton-cycle concept as the highest-scoring option when compared against a vapor-compression mini-fridge baseline, despite acknowledged manufacturing challenges.
+            </p>
+        </section>
+
+        <section>
+            <h2>Design Requirements</h2>
+            <p>The concept was developed to meet the following system-level requirements:</p>
+            <ul>
+                <li>Accommodate cylindrical beverage containers up to 3 in diameter × 8 in length</li>
+                <li>Support containers made of plastic, metal, or glass</li>
+                <li>Enable active cooling of up to two beverages simultaneously</li>
+                <li>Reduce beverage temperature from 80°F to 36°F within 7 minutes</li>
+                <li>Prevent overcooling below 30°F</li>
+                <li>Operate without specialized consumables beyond those commonly found in a kitchen</li>
+                <li>Maintain an overall system envelope of 18 inches cubed or smaller</li>
+                <li>Require less than 5 minutes of setup time</li>
+                <li>Target a manufacturing cost below $300 (2022 USD)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Design Visualization</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px;">
+                <img src="../images/fridge/cycle_diagram.jpg" 
+                     alt="Brayton Cycle Diagram" 
+                     style="width: 100%; max-width: 700px; height: auto; margin: 0 auto; border-radius: 6px;">
+                <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">Reverse Brayton Cycle Diagram</p>
+            </div>
+
+            <div class="images-grid">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/fridge/cad_assembly1.png" 
+                         alt="CAD Assembly" 
+                         style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">CAD Assembly</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/fridge/cad_assembly.png" 
+                         alt="CAD Assembly with Bill of Materials" 
+                         style="width: 100%; height: 100%; object-fit: contain; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">CAD Assembly with BOM</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

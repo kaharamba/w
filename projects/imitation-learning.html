@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imitation Learning Model </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        .back-link::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .status strong {
+            color: #333;
+            font-style: normal;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .figure-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .tools-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .tools-list li {
+            padding-left: 0;
+        }
+
+        .tools-list li strong {
+            color: #2c3e50;
+            display: inline-block;
+            min-width: 180px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .tools-list li strong {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Portfolio</a>
+            <h1>Imitation Learning Model for Day–Night Autonomous Driving</h1>
+            <p class="status"><strong>Status:</strong> Extended abstract completed; poster presentation delivered; full manuscript in preparation.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Objective & Research Summary</h2>
+            <p>
+                This project investigates a simplified end-to-end imitation learning approach for low-level autonomous vehicle control under varying illumination conditions. Using a go-kart–based autonomous platform equipped with RGB and thermal cameras, convolutional neural networks were trained to map sensor inputs directly to steering and throttle commands. While daytime performance exceeded 95% accuracy, nighttime performance revealed significant degradation due to distribution shift, motivating future work in conditional imitation learning and hierarchical control architectures.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Contributions</h2>
+            <ul>
+                <li>Designed and deployed a multimodal autonomous vehicle platform (RGB + thermal)</li>
+                <li>Collected and curated a 50k+ image dataset across day and night conditions</li>
+                <li>Trained and evaluated CNN-based imitation learning models for low-level control</li>
+                <li>Identified failure modes caused by illumination-induced distribution shift</li>
+                <li>Proposed architectural extensions using conditional policies and high-level commands</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Figures</h2>
+            <div class="figures-grid">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/IL/rgb_camera.jpg" 
+                         alt="RGB Camera View" 
+                         style="width: 100%; height: auto; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">RGB Camera</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/IL/thermal_camera.jpg" 
+                         alt="Thermal Camera View" 
+                         style="width: 100%; height: auto; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">Thermal Camera</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/IL/go_kart.jpg" 
+                         alt="Go-Kart Platform" 
+                         style="width: 100%; height: auto; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">Autonomous Platform</p>
+                </div>
+            </div>
+            
+            <div class="figures-grid" style="margin-top: 30px;">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/IL/training_val_rgb.png" 
+                         alt="RGB Training and Validation Results" 
+                         style="width: 100%; height: auto; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">RGB Model Results</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <img src="../images/IL/training_val_thermal.png" 
+                         alt="Thermal Training and Validation Results" 
+                         style="width: 100%; height: auto; border-radius: 6px;">
+                    <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">Thermal Model Results</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tools & Systems Used</h2>
+            <ul class="tools-list">
+                <li><strong>ML / Software:</strong> PyTorch, Python, OpenCV</li>
+                <li><strong>Sensing:</strong> RGB camera, thermal camera</li>
+                <li><strong>Embedded / Control:</strong> Teensy microcontroller, CAN bus</li>
+                <li><strong>Autonomy Stack:</strong> ROS2</li>
+                <li><strong>Hardware:</strong> Go-kart–based autonomous platform</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Results & Failure Analysis</h2>
+            <p>
+                The go-kart autonomously navigated 0.9 miles at night using a thermal-camera-based imitation learning model, requiring four human interventions when the vehicle deviated from the road. Notably, the model was trained using data collected from a single manual driving pass.
+            </p>
+            <p>
+                In contrast, the RGB-based model performed significantly worse under nighttime conditions, repeatedly steering toward brightly illuminated grass patches. This behavior was attributed to dataset bias and poor generalization under low-light conditions.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

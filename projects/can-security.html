@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense-in-Depth Security Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        .back-link::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .status strong {
+            color: #333;
+            font-style: normal;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .tools-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .tools-list li {
+            padding-left: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Portfolio</a>
+            <h1>Defense-in-Depth Security Architecture for CAN-Based Autonomous Vehicle Control Systems</h1>
+            <p class="status"><strong>Status:</strong> Oral presentation delivered; manuscript in preparation.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Objective & Research Summary</h2>
+            <p>
+                This work evaluates a defense-in-depth security architecture for CAN-based autonomous vehicle control systems. The system spans distributed throttle, brake, and steering control communicating over a 250 kbit/s CAN bus and integrates layered prevention, detection, and response mechanisms. Validation was performed through controlled attack scenarios including message injection, replay, and malicious command ramping on a physical autonomous vehicle platform.
+            </p>
+            <p>
+                I conceived and executed the attack methodology used to validate the proposed security architecture. This included performing CAN message injection and replay attacks from an external laptop, successfully taking control of steering and throttle subsystems prior to the activation of security mechanisms. I also supported experimental validation during live demonstrations.
+            </p>
+        </section>
+
+        <section>
+            <h2>Attack Scenarios Demonstrated</h2>
+            <ul>
+                <li>CAN message injection from a remote laptop to override steering and throttle commands</li>
+                <li>Replay attacks using spoofed CAN identifiers</li>
+                <li>Command ramping to induce unsafe control behavior</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tools & Systems Used</h2>
+            <ul class="tools-list">
+                <li>CAN bus (250 kbit/s)</li>
+                <li>Teensy 4.1 microcontrollers</li>
+                <li>Laptop-based CAN injection tooling</li>
+                <li>Distributed embedded control network</li>
+                <li>Autonomous vehicle platform</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

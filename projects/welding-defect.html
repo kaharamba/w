@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Welding Defect Detection System – Concept Design (Hackathon) </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
+
+        .back-link::before {
+            content: "← ";
+            margin-right: 5px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .schematic-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #ecf0f1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 1em;
+            margin: 25px 0;
+        }
+
+        .outcome-box {
+            background: #f8f9fa;
+            border-left: 4px solid #333;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .outcome-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .schematic-placeholder {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-link">Back to Portfolio</a>
+            <h1>Autonomous Welding Defect Detection — Concept Design (Hackathon)</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Objective & Motivation</h2>
+            <p>
+                This project was developed during an AI-focused hackathon to address safety and quality challenges in industrial welding. The motivation arose from an aging skilled welding workforce and high injury rates associated with manual welding operations. The proposed system explores how autonomous, perception-based inspection could reduce operator risk while improving weld quality consistency.
+            </p>
+        </section>
+
+        <section>
+            <h2>System Concept</h2>
+            <p>
+                The proposed system integrates camera and X-ray sensing at multiple welding stations to enable real-time defect detection and quality assessment. Inspection data is aggregated by a centralized model to predict weld integrity, flag anomalies, and provide feedback to operators and downstream automation systems.
+            </p>
+        </section>
+
+        <section>
+            <h2>System Schematic</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <img src="../images/welding/welding_diagram.png" 
+                     alt="System Architecture Diagram" 
+                     style="width: 100%; height: auto; border-radius: 6px;">
+                <p style="text-align: center; margin: 0; font-size: 0.9em; color: #7f8c8d;">System Architecture and Data Flow</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Contributions</h2>
+            <ul>
+                <li>Originated the project concept and problem framing</li>
+                <li>Conducted background research on workforce safety and welding injury statistics</li>
+                <li>Designed the system-level architecture and data flow between inspection stations</li>
+                <li>Led a five-person team through concept development and final presentation</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Outcome</h2>
+            <div class="outcome-box">
+                <p>The project was awarded 2nd place out of 62 teams in the AI for a Better Future category.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. <a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

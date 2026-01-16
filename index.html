@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card {
+            border: 1px solid #e1e8ed;
+            border-radius: 6px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #ecf0f1;
+            color: #555;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .skill-category h3 {
+            color: #34495e;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 6px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            section {
+                padding: 25px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+
+    <div class="container">
+        <section id="research">
+            <h2>Research</h2>
+            <div class="project-grid">
+                <a href="projects/imitation-learning.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Imitation Learning Model for Day–Night Autonomous Driving</h3>
+                        <p>Developed and evaluated an imitation learning model on a physical autonomous go-kart using RGB and thermal vision, enabling low-level steering and throttle control under varying illumination conditions.</p>
+                   
+                    </div>
+                </a>
+
+                <a href="projects/can-security.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Defense-in-Depth Security Architecture for CAN-Based Autonomous Vehicle Control Systems</h3>
+                        <p>Executed real-world CAN bus attack scenarios—including message injection and replay—from an external laptop to override steering and throttle on a physical autonomous vehicle, supporting validation of a defense-in-depth security architecture.</p>
+                  
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="engineering">
+            <h2>Engineering Projects</h2>
+            <div class="project-grid">
+                <a href="projects/base-isolator.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Base Isolator Study</h3>
+                        <p>Conducted analysis of seismic base isolation systems, investigating structural dynamics and vibration mitigation techniques for earthquake-resistant building design.</p>
+                   
+                    </div>
+                </a>
+
+                <a href="projects/mini-fridge.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Mini-Fridge Design Concept</h3>
+                        <p>Designed and analyzed a compact refrigeration system, focusing on thermodynamic efficiency, material selection, and user-centered design principles.</p>
+                        
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="applied">
+            <h2>Applied Execution</h2>
+            <div class="project-grid">
+                <a href="projects/oc-sustainability.html" class="project-link">
+                    <div class="project-card">
+                        <h3>OC Sustainability Decathlon 2023 - Team Roots</h3>
+                        <p>Executed interior furnishing and staging for an interdisciplinary sustainable housing project, translating architectural intent into physical implementation under strict budget, time, and logistical constraints.</p>
+                      
+                    </div>
+                </a>
+
+                <a href="projects/welding-defect.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Autonomous Welding Defect Detection — Concept Design (Hackathon) </h3>
+                        <p> Conceived and led a system-level concept for autonomous welding defect detection using perception-based inspection, addressing safety and quality challenges in industrial welding (2nd place, AI for a Better Future category).</p>
+                
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aspen Knox. Built with HTML & CSS.</p>
+    </footer>
+</body>
+</html>
